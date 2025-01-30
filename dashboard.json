@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "serverURL": "http://localhost:1337/parse",
+      "appId": "MiSuperApp123",
+      "masterKey": "MiMasterKey456",
+      "appName": "MiParseApp"
+    }
+  ],
+  "users": [
+    {
+      "user": "admin",
+      "pass": "admin"
+    }
+  ]
+}
