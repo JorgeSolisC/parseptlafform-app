@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0f1bf26e7d4e16ae0ce7c968754c67c",
+    "content-hash": "540bfb2cd5d91aa1b5f4b34d3d525e68",
     "packages": [
         {
             "name": "brick/math",
@@ -509,6 +509,59 @@
                 }
             ],
             "time": "2024-12-27T00:36:43+00:00"
+        },
+        {
+            "name": "facade/ignition-contracts",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facade/ignition-contracts.git",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facade/ignition-contracts/zipball/3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^v2.15.8",
+                "phpunit/phpunit": "^9.3.11",
+                "vimeo/psalm": "^3.17.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Facade\\IgnitionContracts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://flareapp.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Solution contracts for Ignition",
+            "homepage": "https://github.com/facade/ignition-contracts",
+            "keywords": [
+                "contracts",
+                "flare",
+                "ignition"
+            ],
+            "support": {
+                "issues": "https://github.com/facade/ignition-contracts/issues",
+                "source": "https://github.com/facade/ignition-contracts/tree/1.0.2"
+            },
+            "time": "2020-10-16T08:27:54+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -1053,6 +1106,108 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "jenssegers/mongodb",
+            "version": "5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/laravel-mongodb.git",
+                "reference": "cc7e5ffd0e8e3a9acfebd7aa5a5aabac2fc5eac4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/laravel-mongodb/zipball/cc7e5ffd0e8e3a9acfebd7aa5a5aabac2fc5eac4",
+                "reference": "cc7e5ffd0e8e3a9acfebd7aa5a5aabac2fc5eac4",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2.0.0",
+                "ext-mongodb": "^1.15",
+                "illuminate/cache": "^10.36|^11",
+                "illuminate/container": "^10.0|^11",
+                "illuminate/database": "^10.30|^11",
+                "illuminate/events": "^10.0|^11",
+                "illuminate/support": "^10.0|^11",
+                "mongodb/mongodb": "^1.18",
+                "php": "^8.1"
+            },
+            "conflict": {
+                "illuminate/bus": "< 10.37.2"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "12.0.x-dev",
+                "league/flysystem-gridfs": "^3.28",
+                "league/flysystem-read-only": "^3.0",
+                "mockery/mockery": "^1.4.4",
+                "mongodb/builder": "^0.2",
+                "orchestra/testbench": "^8.0|^9.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^10.3",
+                "rector/rector": "^1.2",
+                "spatie/laravel-query-builder": "^5.6"
+            },
+            "suggest": {
+                "league/flysystem-gridfs": "Filesystem storage in MongoDB with GridFS",
+                "mongodb/builder": "Provides a fluent aggregation builder for MongoDB pipelines"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MongoDB\\Laravel\\MongoDBServiceProvider",
+                        "MongoDB\\Laravel\\MongoDBBusServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MongoDB\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com",
+                    "role": "Leader"
+                },
+                {
+                    "name": "Jérôme Tamarelle",
+                    "email": "jerome.tamarelle@mongodb.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com",
+                    "role": "Creator"
+                }
+            ],
+            "description": "A MongoDB based Eloquent model and Query builder for Laravel",
+            "homepage": "https://github.com/mongodb/laravel-mongodb",
+            "keywords": [
+                "database",
+                "eloquent",
+                "laravel",
+                "model",
+                "mongo",
+                "mongodb"
+            ],
+            "support": {
+                "issues": "https://www.mongodb.com/support",
+                "security": "https://www.mongodb.com/security",
+                "source": "https://github.com/mongodb/laravel-mongodb/tree/5.1.1"
+            },
+            "abandoned": "mongodb/laravel-mongodb",
+            "time": "2025-01-06T09:22:28+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2007,6 +2162,83 @@
             "time": "2024-12-08T08:18:47+00:00"
         },
         {
+            "name": "mongodb/mongodb",
+            "version": "1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "75da9ea3b63d97b05e0e8648d8c09a17bc54c0b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/75da9ea3b63d97b05e0e8648d8c09a17bc54c0b6",
+                "reference": "75da9ea3b63d97b05e0e8648d8c09a17bc54c0b6",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2.0",
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-mongodb": "^1.20.0",
+                "php": "^7.4 || ^8.0",
+                "psr/log": "^1.1.4|^2|^3",
+                "symfony/polyfill-php80": "^1.27",
+                "symfony/polyfill-php81": "^1.27"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^12.0",
+                "rector/rector": "^1.1",
+                "squizlabs/php_codesniffer": "^3.7",
+                "symfony/phpunit-bridge": "^5.2",
+                "vimeo/psalm": "^5.13"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "MongoDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Jérôme Tamarelle",
+                    "email": "jerome.tamarelle@mongodb.com"
+                }
+            ],
+            "description": "MongoDB driver library",
+            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "support": {
+                "issues": "https://github.com/mongodb/mongo-php-library/issues",
+                "source": "https://github.com/mongodb/mongo-php-library/tree/1.20.0"
+            },
+            "time": "2024-09-25T12:54:08+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.8.1",
             "source": {
@@ -2420,6 +2652,58 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
             "time": "2024-12-30T11:07:19+00:00"
+        },
+        {
+            "name": "nscreed/laravel-migration-paths",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nscreed/laravel-migration-paths.git",
+                "reference": "637cbdf75959b8bbaf830add72902edb39606697"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nscreed/laravel-migration-paths/zipball/637cbdf75959b8bbaf830add72902edb39606697",
+                "reference": "637cbdf75959b8bbaf830add72902edb39606697",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": ">=5.5",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NsCreed\\MigrationPath\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NsCreed\\MigrationPath\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Faisal Islam",
+                    "email": "faisal.islam70@gmail.com"
+                }
+            ],
+            "description": "Custom migration paths for Laravel project.",
+            "keywords": [
+                "laravel",
+                "migrations"
+            ],
+            "support": {
+                "issues": "https://github.com/nscreed/laravel-migration-paths/issues",
+                "source": "https://github.com/nscreed/laravel-migration-paths/tree/1.2.0"
+            },
+            "time": "2021-02-09T21:03:17+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -3362,6 +3646,179 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "stancl/jobpipeline",
+            "version": "v1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/jobpipeline.git",
+                "reference": "6b5aaa16a5c2b6ca32abcefd82c9c1320be8c2f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/jobpipeline/zipball/6b5aaa16a5c2b6ca32abcefd82c9c1320be8c2f3",
+                "reference": "6b5aaa16a5c2b6ca32abcefd82c9c1320be8c2f3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^9.0|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "ext-redis": "*",
+                "orchestra/testbench": "^7.0|^8.0|^9.0",
+                "spatie/valuestore": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stancl\\JobPipeline\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel.stancl@gmail.com"
+                }
+            ],
+            "description": "Turn any series of jobs into Laravel listeners.",
+            "support": {
+                "issues": "https://github.com/archtechx/jobpipeline/issues",
+                "source": "https://github.com/archtechx/jobpipeline/tree/v1.7.2"
+            },
+            "time": "2024-12-16T15:45:18+00:00"
+        },
+        {
+            "name": "stancl/tenancy",
+            "version": "v3.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/tenancy.git",
+                "reference": "30cdc9461e1a120834e8cdee39aef7a9ced9f863"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/tenancy/zipball/30cdc9461e1a120834e8cdee39aef7a9ced9f863",
+                "reference": "30cdc9461e1a120834e8cdee39aef7a9ced9f863",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "facade/ignition-contracts": "^1.0.2",
+                "illuminate/support": "^9.0|^10.0|^11.0",
+                "php": "^8.0",
+                "ramsey/uuid": "^4.7.3",
+                "stancl/jobpipeline": "^1.6.2",
+                "stancl/virtualcolumn": "^1.3.1"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^3.6.0",
+                "laravel/framework": "^9.0|^10.0|^11.0",
+                "league/flysystem-aws-s3-v3": "^3.12.2",
+                "orchestra/testbench": "^7.0|^8.0|^9.0",
+                "spatie/valuestore": "^1.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Tenancy": "Stancl\\Tenancy\\Facades\\Tenancy",
+                        "GlobalCache": "Stancl\\Tenancy\\Facades\\GlobalCache"
+                    },
+                    "providers": [
+                        "Stancl\\Tenancy\\TenancyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Stancl\\Tenancy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel.stancl@gmail.com"
+                }
+            ],
+            "description": "Automatic multi-tenancy for your Laravel application.",
+            "keywords": [
+                "laravel",
+                "multi-database",
+                "multi-tenancy",
+                "tenancy"
+            ],
+            "support": {
+                "issues": "https://github.com/archtechx/tenancy/issues",
+                "source": "https://github.com/archtechx/tenancy/tree/v3.8.5"
+            },
+            "funding": [
+                {
+                    "url": "https://tenancyforlaravel.com/donate",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/stancl",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-10-02T21:44:08+00:00"
+        },
+        {
+            "name": "stancl/virtualcolumn",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/virtualcolumn.git",
+                "reference": "65f90003282c231a19367edf9692bfb6b6f23fb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/virtualcolumn/zipball/65f90003282c231a19367edf9692bfb6b6f23fb8",
+                "reference": "65f90003282c231a19367edf9692bfb6b6f23fb8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0|^10.0|^11.0",
+                "illuminate/support": "^9.0|^10.0|^11.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stancl\\VirtualColumn\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel.stancl@gmail.com"
+                }
+            ],
+            "description": "Eloquent virtual column.",
+            "support": {
+                "issues": "https://github.com/archtechx/virtualcolumn/issues",
+                "source": "https://github.com/archtechx/virtualcolumn/tree/v1.4.1"
+            },
+            "time": "2024-04-07T18:26:29+00:00"
         },
         {
             "name": "symfony/clock",
@@ -4777,6 +5234,82 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/polyfill-php80/tree/v1.31.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php81",
+            "version": "v1.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php81.git",
+                "reference": "4a4cfc2d253c21a5ad0e53071df248ed48c6ce5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/4a4cfc2d253c21a5ad0e53071df248ed48c6ce5c",
+                "reference": "4a4cfc2d253c21a5ad0e53071df248ed48c6ce5c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php81\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.31.0"
             },
             "funding": [
                 {

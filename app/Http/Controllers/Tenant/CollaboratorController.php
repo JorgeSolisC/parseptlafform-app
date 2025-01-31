@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Tenant;
 
+use App\Http\Controllers\Controller;
+use App\Models\Tenant\Collaborator\Collaborator;
 use Illuminate\Http\Request;
-use App\Models\User\User;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 
-class UserController extends Controller
+class CollaboratorController extends Controller
 {
     protected $userService;
 
@@ -21,23 +22,27 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'email' => 'required|email|unique:users',
+            'tenant_id' => 'nullable|string',
+            'email' => 'required|email|unique:collaborators',
         ]);
 
-        $parseId = $this->userService->createUserInParse(
-            [
-                ...$request->all(),
-                'password' => "123456789"
-            ]
-        );
+        $data = [
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'tenant_id' => $request->input('tenant_id') ?? null,
+            'password' => "123456789",
+        ];
+
+        $parseId = $this->userService->createUserInParse($data);
 
         if (isset($parseId['error'])) {
             return response()->json(['error' => $parseId['error']], 400);
         }
 
-        $user = User::create([
+        $user = Collaborator::create([
             'name' => $request->name,
             'email' => $request->email,
+            'tenant_id' => $request->tenant_id,
             'password' => Hash::make(123456789),
             'parse_id' => $parseId,
         ]);
@@ -49,12 +54,14 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'email' => 'required|email|unique:users',
+            'tenant_id' => 'nullable|string',
+            'email' => 'required|email|unique:collaborators',
         ]);
 
         $data = [
             'username' => $request->input('name'),
             'email' => $request->input('email'),
+            'tenant_id' => $request->input('tenant_id') ?? null,
             'password' => "123456789",
         ];
 
@@ -71,7 +78,7 @@ class UserController extends Controller
         if ($response->successful()) {
             $parseUser = $response->json();
 
-            User::create([
+            Collaborator::create([
                 'name' => $data['username'],
                 'email' => $data['email'],
                 'parse_id' => $parseUser['objectId'],
@@ -85,4 +92,6 @@ class UserController extends Controller
             'message' => $response->body(),
         ], $response->status());
     }
+
+
 }
