@@ -40,5 +40,17 @@ return [
         'rest_key'   => env('PARSE_REST_KEY'),
         'master_key' => env('PARSE_MASTER_KEY'),
         'server_url' => env('PARSE_SERVER_URL'),
+        'livequery_url_server' => env('PARSE_LIVEQUERY_SERVER'),
+    ],
+
+    'pusher' => [
+        'driver' => 'pusher',
+        'key' => env('PUSHER_APP_KEY'),
+        'secret' => env('PUSHER_APP_SECRET'),
+        'app_id' => env('PUSHER_APP_ID'),
+        'options' => [
+            'cluster' => env('PUSHER_APP_CLUSTER'),
+            'useTLS' => true,
+        ],
     ],
 ];

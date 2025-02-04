@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\ParseLiveQueryClient;
 use Illuminate\Support\ServiceProvider;
 use Parse\ParseClient;
 
@@ -12,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+
     }
 
     /**

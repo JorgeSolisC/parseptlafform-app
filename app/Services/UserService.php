@@ -15,7 +15,7 @@ class UserService
         $user->set("tenant_id", $data['tenant_id']);
 
         try {
-            $user->save();
+            $user->signUp();
             return $user->getObjectId(); 
         } catch (\Exception $e) {
             return ['error' => $e->getMessage(), 'line'=> $e->getTrace()];

@@ -1,16 +1,24 @@
 {
-  "apps": [
-    {
-      "serverURL": "http://localhost:1337/parse",
-      "appId": "MiSuperApp123",
-      "masterKey": "MiMasterKey456",
-      "appName": "MiParseApp"
-    }
-  ],
-  "users": [
-    {
-      "user": "admin",
-      "pass": "admin"
-    }
-  ]
-}
+    "apps": [
+      {
+        "allowInsecureHTTP": "true",
+        "serverURL": "http://localhost:1337/parse",
+        "appId": "MiSuperApp123",
+        "masterKey": "MiMasterKey456",
+        "appName": "MiParseApp",
+        "liveQueryURL": "ws://localhost:1337/parse",
+        "webhook": "http://localhost:1337/parse",
+        "liveQuery": {
+            "classNames": ["_User"]
+        }
+      }
+    ],
+    "users": [
+      {
+        "user": "admin",
+        "pass": "admin"
+      }
+    ],
+    "port": "8080"
+
+  }
