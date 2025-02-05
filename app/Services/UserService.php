@@ -12,7 +12,7 @@ class UserService
         $user->set("username", $data['name']);
         $user->set("email", $data['email']);
         $user->set("password", $data['password']);
-        $user->set("tenant_id", $data['tenant_id']);
+        $user->set("tenant_id", $data['tenant_id'] ?? null);
 
         try {
             $user->signUp();
